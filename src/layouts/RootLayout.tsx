@@ -1,18 +1,16 @@
-// src/layouts/RootLayout.tsx
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from '../components/Header';
 
 const RootLayout: React.FC = () => {
   return (
-    <div className="min-h-screen bg-background font-sans antialiased">
-      {/* Header will go here in the next step */}
-      <header className="p-4 border-b">
-        <p>Header Placeholder</p>
-      </header>
+    <div className="min-h-screen bg-gray-900 font-sans antialiased">
+      <Header />
       <main>
-        <Outlet />
+        <Suspense fallback={<div className="p-4">Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </main>
-      {/* Footer can go here */}
     </div>
   );
 };
