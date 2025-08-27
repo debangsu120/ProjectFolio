@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Junicode:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #0a0a0a;
+  --foreground: oklch(0.985 0 0);
+  --card: #111111;
+  --card-foreground: oklch(0.985 0 0);
+  --popover: #111111;
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+  --radius: 0.75rem;
+  
+  /* Glass morphism variables */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --glass-blur: 10px;
+  
+  /* Typography system */
+  --font-display: 'Junicode', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: oklch(0.985 0 0);
+  --card: #111111;
+  --card-foreground: oklch(0.985 0 0);
+  --popover: #111111;
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    background: radial-gradient(ellipse at center, rgba(20, 20, 30, 1) 0%, rgba(5, 5, 15, 1) 100%);
+    min-height: 100vh;
+  }
+}
+
+/* Typography utility classes */
+@layer utilities {
+  /* Display font utilities */
+  .font-display {
+    font-family: var(--font-display);
+  }
+  
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+  
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  
+  /* Junicode specific weights */
+  .font-junicode-light {
+    font-family: var(--font-display);
+    font-weight: 300;
+  }
+  
+  .font-junicode-normal {
+    font-family: var(--font-display);
+    font-weight: 400;
+  }
+  
+  .font-junicode-medium {
+    font-family: var(--font-display);
+    font-weight: 500;
+  }
+  
+  /* Glass morphism utility classes */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .glass-card-hover:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Mobile scrollable glass cards */
+  .mobile-scrollable-glass {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  @media (max-width: 1023px) {
+    .mobile-scrollable-glass {
+      height: 60vh;
+      max-height: 500px;
+    }
+  }
+  
+  .mobile-scroll-content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 4px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  }
+  
+  .mobile-scroll-content::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  .mobile-scroll-content::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .mobile-scroll-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+  }
+  
+  .mobile-scroll-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Inner blur gradients for mobile */
+  .mobile-scrollable-glass::before,
+  .mobile-scrollable-glass::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 32px;
+    pointer-events: none;
+    z-index: 10;
+    border-radius: inherit;
+  }
+  
+  .mobile-scrollable-glass::before {
+    top: 0;
+    background: linear-gradient(180deg, 
+      rgba(17, 17, 17, 1) 0%, 
+      rgba(17, 17, 17, 0.8) 40%, 
+      transparent 100%);
+  }
+  
+  .mobile-scrollable-glass::after {
+    bottom: 0;
+    background: linear-gradient(0deg, 
+      rgba(17, 17, 17, 1) 0%, 
+      rgba(17, 17, 17, 0.8) 40%, 
+      transparent 100%);
+  }
+  
+  /* Hide blur effects on desktop */
+  @media (min-width: 1024px) {
+    .mobile-scrollable-glass::before,
+    .mobile-scrollable-glass::after {
+      display: none;
+    }
+    
+    .mobile-scroll-content {
+      overflow: visible;
+      height: auto;
+      padding: 0;
+    }
+  }
+}
+
+/**
+ * Enhanced typography system with multiple fonts
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-family: var(--font-display);
+      font-weight: 300;
+      font-size: 2.5rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-weight: 400;
+      font-size: 1.875rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1.5rem;
+      line-height: 1.4;
+    }
+
+    h4 {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+
+    h5 {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 1.125rem;
+      line-height: 1.4;
+    }
+
+    h6 {
+      font-family: var(--font-sans);
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    p {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    label {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+
+    button {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.4;
+      letter-spacing: 0.01em;
+    }
+
+    input {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+
+    code {
+      font-family: var(--font-mono);
+      font-weight: 400;
+      font-size: 0.875em;
+    }
+
+    pre {
+      font-family: var(--font-mono);
+      font-weight: 400;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
